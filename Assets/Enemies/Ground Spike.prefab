@@ -151,7 +151,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   peekTime: 0.5
   peekDistance: 1
-  hideAfterSeconds: 2
+  hideAfterSeconds: 1
   warningPrefab: {fileID: 5047234434802554994, guid: 35ead9610795312469495ea64e6c89d7, type: 3}
   warningY: 1
   peekSound: {fileID: -8163675245103793701}

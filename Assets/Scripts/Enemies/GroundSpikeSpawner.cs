@@ -38,7 +38,7 @@ namespace Enemies
                 int spikesToSpawn = Random.Range(1, maxPerSpawn);
             
                 // Should the spikes be spawned at the same time or one by one?
-                bool spawnAllAtOnce = Random.Range(0, 3) > 0 && Score.Value > 1500;
+                bool spawnAllAtOnce = Random.Range(0, 2) > 0;
 
                 if (spawnAllAtOnce)
                 {
@@ -50,7 +50,7 @@ namespace Enemies
                     for (int i = 0; i < spikesToSpawn; i++)
                     {
                         SpawnSpike();
-                        float wait = Random.Range(0.1f, 0.5f);
+                        float wait = Random.Range(0.2f, 1f);
                         yield return new WaitForSeconds(wait);
                     }
                 }

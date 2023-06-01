@@ -9,7 +9,7 @@ namespace Enemies
         Rigidbody2D _rb;
         [SerializeField] float peekTime = 2f;
         [SerializeField] float peekDistance = 2f;
-        [SerializeField] int hideAfterSeconds = 2;
+        [SerializeField] float hideAfterSeconds = 1.5f;
         [SerializeField] Warning warningPrefab;
         [SerializeField] float warningY = 1f;
         [SerializeField] AudioSource peekSound;
