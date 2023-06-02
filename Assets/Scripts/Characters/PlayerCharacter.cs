@@ -21,6 +21,10 @@ namespace Characters
     
         [SerializeField] Animator animator;
         [SerializeField] AudioSource deathSound;
+
+        [SerializeField] Transform center;
+        public Transform Center => center;
+        
         public bool IsAlive { get; private set; } = true;
 
         void Start() => Core.Events.InvokeBegin();

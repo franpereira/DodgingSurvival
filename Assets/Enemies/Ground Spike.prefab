@@ -149,10 +149,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5850f8fe9f8a67146b25cb13fc676a41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  peekTime: 0.5
+  peekTime: 1
   peekDistance: 1
   hideAfterSeconds: 1
-  warningPrefab: {fileID: 5047234434802554994, guid: 35ead9610795312469495ea64e6c89d7, type: 3}
+  warningPrefab: {fileID: 5047234434802554994, guid: a197a1e403443704c9e391c0a653a537, type: 3}
   warningY: 1
   peekSound: {fileID: -8163675245103793701}
 --- !u!82 &-8163675245103793701

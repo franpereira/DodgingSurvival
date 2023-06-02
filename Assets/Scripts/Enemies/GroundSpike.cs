@@ -13,7 +13,7 @@ namespace Enemies
         [SerializeField] Warning warningPrefab;
         [SerializeField] float warningY = 1f;
         [SerializeField] AudioSource peekSound;
-    
+
         void Awake() => _rb = GetComponent<Rigidbody2D>();
         void OnEnable() => StartCoroutine(Peek());
 
@@ -21,8 +21,9 @@ namespace Enemies
         IEnumerator Peek()
         {
             Vector2 warningPos = new Vector2(transform.position.x, warningY);
-            Instantiate(warningPrefab, warningPos, Quaternion.identity);
+            Warning warning = Instantiate(warningPrefab, warningPos, Quaternion.identity);
             yield return new WaitForSeconds(0.2f);
+            
         
             Vector2 startPosition = _rb.position;
             Vector2 endPosition = startPosition + Vector2.up * peekDistance;
@@ -38,6 +39,7 @@ namespace Enemies
                 {
                     peekSound.pitch = Random.Range(0.8f, 2f);
                     peekSound.Play();
+                    Destroy(warning.gameObject);
                 }
 
                 yield return null;
