@@ -66,7 +66,7 @@ namespace Enemies
             float secondsBeforeImpact = 3f;
             yield return new WaitForSeconds(timeOfFlight - secondsBeforeImpact);
 
-            Vector2 warningPos = new Vector2(targetPos.x, 1f);
+            Vector2 warningPos = new(targetPos.x, 1f);
             Warning warning = Instantiate(warningPrefab, warningPos, Quaternion.identity);
 
             // Scale the warning based on the time remaining.

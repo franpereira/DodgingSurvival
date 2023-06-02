@@ -36,7 +36,7 @@ public class MusicManager : MonoBehaviour
     IEnumerator RecoverPitch()
     {
         float startTime = Time.time;
-        float endTime = startTime + 1f;
+        float endTime = startTime + 2f;
         while (Time.time < endTime)
         {
             float t = (Time.time - startTime) / (endTime - startTime);

@@ -36,8 +36,8 @@ namespace Enemies
                 float seconds = spawnInterval;
                 yield return new WaitForSeconds(seconds);
             
-                // One more every 100 score points with a max of 8.
-                int maxPerSpawn = Mathf.Min(8, (int) (Score.Value / 100 + 1));
+                // One more every 100 score points with a max of 7.
+                int maxPerSpawn = Mathf.Min(7, (int) (Score.Value / 100 + 1));
                 int spikesToSpawn = Random.Range(1, maxPerSpawn);
             
                 for (int i = 0; i < spikesToSpawn; i++)

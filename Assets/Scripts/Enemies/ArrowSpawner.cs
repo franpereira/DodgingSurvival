@@ -36,7 +36,8 @@ namespace Enemies
                 float seconds = spawnInterval;
                 yield return new WaitForSeconds(seconds);
                 
-                SpawnArrow();
+                if (Score.Value > 1500)
+                    SpawnArrow();
             }
         }
 

@@ -733,7 +733,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrowPrefab: {fileID: 388867453675085922, guid: b1c8eba299b87234b9b546677c7adb60, type: 3}
   spawnX: -50
-  spawnInterval: 1
+  spawnInterval: 1.5
   targetRadius: 10
   player: {fileID: 1674175853}
 --- !u!4 &647921108
