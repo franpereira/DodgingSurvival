@@ -10,7 +10,12 @@ namespace Enemies
         [SerializeField] Rigidbody2D rb;
         [SerializeField] float launchForce = 5f;
         [SerializeField] Warning warningPrefab;
-        
+
+        void Update()
+        {
+            if (transform.position.y < -50f) Destroy(gameObject);
+        }
+
         public void LaunchTowards(Vector2 target)
         {
             Vector2 direction = target - rb.position;
@@ -32,7 +37,7 @@ namespace Enemies
             float distance = direction.magnitude;
 
             // Random launch angle
-            float launchAngle = Random.Range(40, 89) * Mathf.Deg2Rad;
+            float launchAngle = Random.Range(50, 89) * Mathf.Deg2Rad;
             
             // Calculates the height at which the projectile needs to be aimed initially, considering the launch angle.
             direction.y = distance * Mathf.Tan(launchAngle);
@@ -58,7 +63,7 @@ namespace Enemies
         IEnumerator ShowWarning(Vector2 targetPos, float timeOfFlight)
         {
             // Show the warning some seconds before the impact.
-            float secondsBeforeImpact = 2f;
+            float secondsBeforeImpact = 3f;
             yield return new WaitForSeconds(timeOfFlight - secondsBeforeImpact);
 
             Vector2 warningPos = new Vector2(targetPos.x, 1f);

@@ -39,7 +39,7 @@ namespace Enemies
                 {
                     peekSound.pitch = Random.Range(0.8f, 2f);
                     peekSound.Play();
-                    Destroy(warning.gameObject);
+                    if (warning != null) Destroy(warning.gameObject);
                 }
 
                 yield return null;
