@@ -1395,7 +1395,7 @@ MonoBehaviour:
   rb: {fileID: 1674175852}
   acceleration: 0.5
   maxSpeed: 10
-  jumpForce: 14
+  jumpForce: 15
   fallMultiplier: 2.5
   lowJumpMultiplier: 2
   animator: {fileID: 1674175849}
